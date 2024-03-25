@@ -18,6 +18,12 @@ const CELO: AddEthereumChainParameter['nativeCurrency'] = {
   decimals: 18,
 }
 
+const ULR: AddEthereumChainParameter['nativeCurrency'] = {
+  name: 'Ulr',
+  symbol: 'ULR',
+  decimals: 18,
+}
+
 interface BasicChainInformation {
   urls: string[]
   name: string
@@ -115,6 +121,12 @@ export const TESTNET_CHAINS: ChainConfig = {
     name: 'Celo Alfajores',
     nativeCurrency: CELO,
     blockExplorerUrls: ['https://alfajores-blockscout.celo-testnet.org'],
+  },
+  11989: {
+    urls: ['https://testnet.unilayer.io'],
+    name: 'UniLayer Testnet',
+    nativeCurrency: ULR,
+    blockExplorerUrls: ['https://explorer.testnet.unilayer.io/'],
   },
 }
 
